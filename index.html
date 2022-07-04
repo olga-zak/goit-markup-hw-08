@@ -40,22 +40,103 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open-btn" type="button" data-menu-open>
+          <svg class="mobile-menu-open-btn__icon" width="40" height="40">
+            <use href="./images/sprite.svg#mobile-menu-open-btn-icon"></use>
+          </svg>
+        </button>
         <ul class="contact-list">
           <li class="contact-list__item">
             <a class="contact-list__link" href="mailto:info@devstudio.com">
-              <svg class="contact-list__icon" width="16px" height="12px">
+              <svg
+                class="contact-list__icon contact-list__icon-envelope-tablet"
+                width="16px"
+                height="12px"
+              >
                 <use href="./images/sprite.svg#envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="contact-list__item">
             <a class="contact-list__link" href="tel:+380961111111"
-              ><svg class="contact-list__icon" width="10px" height="16px">
+              ><svg
+                class="contact-list__icon contact-list__icon-smartphone-tablet"
+                width="10px"
+                height="16px"
+              >
                 <use href="./images/sprite.svg#smartphone"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
+      </div>
+      <div>
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu__container">
+            <button
+              class="mobile-menu__close-btn"
+              type="button"
+              data-menu-close
+            >
+              <svg class="mobile-menu__close-icon" width="40" height="40">
+                <use
+                  href="./images/sprite.svg#icon-mobile-menu-close-btn-icon"
+                ></use>
+              </svg>
+            </button>
+
+            <ul class="mobile-menu__nav-list">
+              <li class="mobile-menu__nav-item">
+                <a
+                  class="mobile-menu__nav-link mobile-menu__nav-link_current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a
+                  class="mobile-menu__nav-link"
+                  href="./occupation-section.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link" href="">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__contact-list">
+              <li class="mobile-menu__contact-item">
+                <a class="mobile-menu__contact-phone" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contact-item">
+                <a
+                  class="mobile-menu__contact-email"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a class="mobile-menu__social-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -126,40 +207,103 @@
         </div>
       </section>
       <!-- what we do -->
-      <section class="section section__no-padding-top">
+      <section class="section section_no-padding-top section_mobile-hide">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="occupation-list">
             <li class="occupation-list__item">
               <div class="occupation-list__container">
-                <img
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture1-desktop.webp    1x,
+                      ./images/occupation-section/picture1-desktop@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture1-desktop.jpg    1x,
+                      ./images/occupation-section/picture1-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/occupation-section/picture1-desktop.jpg"
+                    alt="мужчина в очках широко улыбается"
+                  />
+                </picture>
+                <!-- <img
                   src="./images/img1.jpg"
                   alt="руки печатают код"
                   width="370"
                   height="294"
-                />
+                /> -->
                 <p class="occupation-list__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="occupation-list__item">
               <div class="occupation-list__container">
-                <img
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture2-desktop.webp    1x,
+                      ./images/occupation-section/picture2-desktop@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture2-desktop.jpg    1x,
+                      ./images/occupation-section/picture2-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/occupation-section/picture2-desktop.jpg"
+                    alt="мужчина в очках широко улыбается"
+                  />
+                </picture>
+                <!-- <img
                   src="./images/img2.jpg"
                   alt="выбор макета для адаптивного сайта"
                   width="370"
                   height="294"
-                />
+                /> -->
                 <p class="occupation-list__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="occupation-list__item">
               <div class="occupation-list__container">
-                <img
+                <picture>
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture3-desktop.webp    1x,
+                      ./images/occupation-section/picture3-desktop@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/occupation-section/picture3-desktop.jpg    1x,
+                      ./images/occupation-section/picture3-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/occupation-section/picture3-desktop.jpg"
+                    alt="мужчина в очках широко улыбается"
+                  />
+                </picture>
+                <!-- <img
                   src="./images/img3.jpg"
                   alt="цветовая палитра на планшете"
                   width="370"
                   height="294"
-                />
+                /> -->
                 <p class="occupation-list__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -167,17 +311,71 @@
         </div>
       </section>
       <!-- our team -->
-      <section class="team-section section section__secondary-bg">
+      <section class="section section_secondary-bg">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                src="./images/person1.jpg"
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-section/person1-desktop.webp    1x,
+                    ./images/team-section/person1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person1-desktop.jpg    1x,
+                    ./images/team-section/person1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person1-tablet.webp    1x,
+                    ./images/team-section/person1-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person1-tablet.jpg    1x,
+                    ./images/team-section/person1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person1-mobile.webp    1x,
+                    ./images/team-section/person1-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person1-mobile.jpg    1x,
+                    ./images/team-section/person1-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/team-section/person1-mobile.jpg"
+                  alt="мужчина в очках широко улыбается"
+                />
+              </picture>
+              <!-- <img
+                src="./images/team-section/person1-mobile.jpg"
                 alt="мужчина в очках широко улыбается"
-                width="270"
-                height="260"
-              />
+                width="450"
+                height="460"
+              /> -->
               <div class="team-list__container">
                 <h3 class="team-list__title">Игорь Демьяненко</h3>
                 <p class="team-list__text">Product Designer</p>
@@ -227,12 +425,66 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-section/person2-desktop.webp    1x,
+                    ./images/team-section/person2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person2-desktop.jpg    1x,
+                    ./images/team-section/person2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person2-tablet.webp    1x,
+                    ./images/team-section/person2-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person2-tablet.jpg    1x,
+                    ./images/team-section/person2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person2-mobile.webp    1x,
+                    ./images/team-section/person2-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person2-mobile.jpg    1x,
+                    ./images/team-section/person2-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/team-section/person2-mobile.jpg"
+                  alt="женщина в очках широко улыбается"
+                />
+              </picture>
+              <!-- <img
                 src="./images/person2.jpg"
                 alt="женщина в очках широко улыбается"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__container">
                 <h3 class="team-list__title">Ольга Репина</h3>
                 <p class="team-list__text">Frontend Developer</p>
@@ -282,12 +534,66 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-section/person3-desktop.webp    1x,
+                    ./images/team-section/person3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person3-desktop.jpg    1x,
+                    ./images/team-section/person3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person3-tablet.webp    1x,
+                    ./images/team-section/person3-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person3-tablet.jpg    1x,
+                    ./images/team-section/person3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person3-mobile.webp    1x,
+                    ./images/team-section/person3-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person3-mobile.jpg    1x,
+                    ./images/team-section/person3-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/team-section/person3-mobile.jpg"
+                  alt="мужчина широко улыбается"
+                />
+              </picture>
+              <!-- <img
                 src="./images/person3.jpg"
                 alt="мужчина широко улыбается"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__container">
                 <h3 class="team-list__title">Николай Тарасов</h3>
                 <p class="team-list__text">Marketing</p>
@@ -337,12 +643,66 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-section/person4-desktop.webp    1x,
+                    ./images/team-section/person4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person4-desktop.jpg    1x,
+                    ./images/team-section/person4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person4-tablet.webp    1x,
+                    ./images/team-section/person4-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person4-tablet.jpg    1x,
+                    ./images/team-section/person4-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team-section/person4-mobile.webp    1x,
+                    ./images/team-section/person4-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team-section/person4-mobile.jpg    1x,
+                    ./images/team-section/person4-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/team-section/person4-mobile.jpg"
+                  alt="мужчина в очках улыбается"
+                />
+              </picture>
+              <!-- <img
                 src="./images/person4.jpg"
                 alt="мужчина в очках улыбается"
                 width="270"
                 height="260"
-              />
+              /> -->
               <div class="team-list__container">
                 <h3 class="team-list__title">Михаил Ермаков</h3>
                 <p class="team-list__text">UI Designer</p>
@@ -441,67 +801,70 @@
     </main>
     <footer class="footer">
       <div class="container container-flex">
-        <div class="footer-contact-part">
-          <a class="logo" href="./index.html"
-            >Web<span class="logo_white">Studio</span>
-          </a>
-          <address class="contacts">
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <a
-                  class="contacts__link contacts__post-address"
-                  href="https://goo.gl/maps/yZt3j3XsbeH96AAz7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="wrapper-flex">
+          <div class="footer-contact-part">
+            <a class="logo" href="./index.html"
+              >Web<span class="logo_white">Studio</span>
+            </a>
+            <address class="contacts">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a
+                    class="contacts__link contacts__post-address"
+                    href="https://goo.gl/maps/yZt3j3XsbeH96AAz7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social-part">
+            <p class="footer__title">присоединяйтесь</p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a class="socials__link socials__link_theme_dark" href="">
+                  <svg class="socials__icon_theme_dark" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="socials__item">
+                <a class="socials__link socials__link_theme_dark" href="">
+                  <svg class="socials__icon_theme_dark" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="socials__item">
+                <a class="socials__link socials__link_theme_dark" href="">
+                  <svg class="socials__icon_theme_dark" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link_theme_dark" href="">
+                  <svg class="socials__icon_theme_dark" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-social-part">
-          <p class="footer__title">присоединяйтесь</p>
-          <ul class="socials">
-            <li class="socials__item">
-              <a class="socials__link socials__link_theme_dark" href="">
-                <svg class="socials__icon_theme_dark" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link_theme_dark" href="">
-                <svg class="socials__icon_theme_dark" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link_theme_dark" href="">
-                <svg class="socials__icon_theme_dark" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link_theme_dark" href="">
-                <svg class="socials__icon_theme_dark" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="footer-subscribe-part">
           <p class="footer__title">Подпишитесь на рассылку</p>
           <form class="subcription-form">
@@ -513,7 +876,7 @@
               required
             /><button class="button subscription-form__button" type="submit">
               Подписаться
-              <svg class="subscription-form__icon" width="24" height="24">
+              <svg class="subscription-form__icon-plane" width="24" height="24">
                 <use href="./images/sprite.svg#plane"></use>
               </svg>
             </button>
@@ -604,5 +967,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

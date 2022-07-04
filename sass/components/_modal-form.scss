@@ -1,7 +1,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 528px;
+  width: 450px;
   padding: 40px;
 }
 .contact-form__title {
@@ -88,8 +88,8 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 .contact-form__icon-checkbox {
@@ -97,7 +97,7 @@
   border: 2px solid var(--secondary-color);
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 7px;
+  margin-right: 8px;
   transition: border var(--transition-data), fill var(--transition-data);
 
   .contact-form__checkbox:focus + & {
@@ -121,5 +121,16 @@
   &:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form {
+    /* width: 528px; */
+    width: 100%;
+  }
+  .contact-form__agreement-field {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }

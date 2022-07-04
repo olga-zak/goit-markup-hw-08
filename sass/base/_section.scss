@@ -1,19 +1,36 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.section__no-padding-top {
-  padding-top: 0;
+.section_mobile-hide {
+  display: none;
 }
-.section__secondary-bg {
+.section_secondary-bg {
   background-color: #f5f4fa;
 }
 .section__title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .section_mobile-hide {
+    display: block;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .section_no-padding-top {
+    padding-top: 0;
+  }
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

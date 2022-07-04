@@ -1,19 +1,15 @@
-.peculiarities-list {
-  display: flex;
-  flex-wrap: wrap;
-}
 .peculiarities-list__item {
-  width: 270px;
-
-  &:not(:nth-child(4n)) {
-    margin-right: 30px;
-  }
+  width: 450px;
+}
+.peculiarities-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 .peculiarities-list__icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 450px;
+
   height: 120px;
   margin-bottom: 30px;
   background: #f5f4fa;
@@ -26,10 +22,52 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--secondary-color);
 }
 .peculiarities-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+/* added for mobile что то странное с макс шириной, на 767 и 768 */
+/* @media screen and (max-width: 767px) {
+  .peculiarities-list__title {
+    text-align: center;
+  }
+} */
+@media screen and (min-width: 768px) {
+  .peculiarities-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .peculiarities-list__item {
+    width: 354px;
+  }
+  .peculiarities-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .peculiarities-list__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+  .peculiarities-list__icon-container {
+    width: 354px;
+  }
+  .peculiarities-list__title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .peculiarities-list__item {
+    width: 270px;
+  }
+  .peculiarities-list__item:not(:nth-child(4n)) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .peculiarities-list__icon-container {
+    width: 270px;
+  }
 }

@@ -1,82 +1,135 @@
-.header {
-  border-bottom: 1px solid #ececec;
-}
-.header__container,
-.navigation {
-  display: flex;
-  align-items: center;
-}
 .nav-list {
-  display: flex;
-}
-.header__nav-list {
-  margin-left: 93px;
-}
-.nav-list__item + .nav-list__item {
-  margin-left: 50px;
-}
-.nav-list__link {
-  padding: 32px 0;
-  display: block;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-color);
-  transition: color var(--transition-data);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-.nav-list__link_current {
-  position: relative;
-  color: var(--accent-color);
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-  }
+  display: none;
 }
 .contact-list {
-  display: flex;
-  margin-left: auto;
+  display: none;
 }
-.contact-list__item:not(:last-child) {
-  margin-right: 50px;
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ececec;
 }
-.contact-list__link {
+.header__container {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-color);
-  transition: color var(--transition-data);
+  justify-content: space-between;
+}
 
-  &:hover,
-  &:focus {
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .mobile-menu-open-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .nav-list {
+    display: flex;
+  }
+  .header__nav-list {
+    margin-left: 88px;
+  }
+  .nav-list__item + .nav-list__item {
+    margin-left: 50px;
+  }
+  .nav-list__link {
+    padding: 32px 0;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    transition: color var(--transition-data);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .nav-list__link_current {
+    position: relative;
     color: var(--accent-color);
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+  .contact-list {
+    display: block;
+  }
+  .contact-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .contact-list__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+  }
+  .contact-list__icon {
+    margin-right: 8px;
+    fill: var(--primary-color);
+  }
+  .contact-list__icon-envelope-tablet {
+    width: 14px;
+    height: 10px;
+  }
+  .contact-list__icon-smartphone-tablet {
+    width: 10px;
+    height: 14px;
   }
 }
-.contact-list__icon {
-  margin-right: 10px;
-  fill: var(--primary-color);
-  transition: fill var(--transition-data);
 
-  .contact-list__link:hover &,
-  .contact-list__link:focus & {
-    fill: var(--accent-color);
+@media screen and (min-width: 1200px) {
+  .header__nav-list {
+    margin-left: 93px;
+  }
+  .contact-list {
+    display: flex;
+    margin-left: auto;
+  }
+  .contact-list__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+  .contact-list__link {
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color var(--transition-data);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  .contact-list__icon {
+    margin-right: 10px;
+    transition: fill var(--transition-data);
+
+    .contact-list__link:hover &,
+    .contact-list__link:focus & {
+      fill: var(--accent-color);
+    }
   }
 }
