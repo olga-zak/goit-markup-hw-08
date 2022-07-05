@@ -285,7 +285,7 @@ img {
 }
 .hero__title {
   margin: 0 auto 30px auto;
-  width: 360px;
+  width: 100%;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -1196,6 +1196,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  /* width: 100%; */
 }
 
 .mobile-menu-open-btn {
@@ -1286,7 +1287,6 @@ img {
   color: var(--accent-color);
 }
 
-/* not(:last-child) doesn't work, полоски исчезают у всех */
 .mobile-menu__social-item:not(:last-child)::after {
   content: "";
   position: absolute;
