@@ -1192,6 +1192,10 @@ img {
 .mobile-menu__container {
   position: relative;
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .mobile-menu-open-btn {
@@ -1219,10 +1223,6 @@ img {
 .mobile-menu__close-btn:hover .mobile-menu__close-icon,
 .mobile-menu__close-btn:focus .mobile-menu__close-icon {
   fill: var(--accent-color);
-}
-
-.mobile-menu__nav-list {
-  margin-bottom: 302px;
 }
 
 .mobile-menu__nav-item:not(:last-child) {
