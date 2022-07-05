@@ -328,7 +328,7 @@ img {
   }
 }
 .peculiarities-list__item {
-  width: 450px;
+  width: 100%;
 }
 
 .peculiarities-list__item:not(:last-child) {
@@ -339,7 +339,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background: #f5f4fa;
