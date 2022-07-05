@@ -59,7 +59,6 @@
 }
 @media screen and (min-width: 1200px) {
   .clients-list__item {
-    /* width: 170px; */
     width: calc((100% - 150px) / 6);
 
     &:not(:nth-last-child(-n + 3)) {

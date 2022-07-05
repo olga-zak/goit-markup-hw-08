@@ -16,8 +16,10 @@
 .footer-social-part {
   margin-top: 60px;
   margin-right: auto;
-  margin-bottom: 60px;
   margin-left: auto;
+}
+.wrapper-flex {
+  margin-bottom: 60px;
 }
 
 .contacts__link {
@@ -68,7 +70,6 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    margin-bottom: 60px;
   }
   .footer-social-part {
     margin: 0;
@@ -77,6 +78,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -86,6 +88,7 @@
   }
   .wrapper-flex {
     margin-bottom: 0;
+    margin-right: 93px;
     flex-grow: 1;
   }
   .footer-contact-part {
@@ -94,9 +97,6 @@
   }
   .contacts__item:not(:last-child) {
     margin-bottom: 9px;
-  }
-  .footer-social-part {
-    margin-right: 93px;
   }
   .subcription-form {
     display: flex;

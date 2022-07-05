@@ -2,10 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  row-gap: 15px;
 }
 .filter-menu__item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 15px;
 }
 .filter-menu__button {
   padding: 6px 22px;
@@ -29,8 +29,7 @@
     color: var(--bg-color);
   }
 }
-.portfolio-list__item {
-  width: 450px;
+.portfolio-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
