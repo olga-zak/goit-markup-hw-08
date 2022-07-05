@@ -88,6 +88,7 @@
 }
 .mobile-menu__socials {
   display: flex;
+  flex-wrap: wrap;
 }
 .mobile-menu__social-item:not(:last-child) {
   margin-right: 20px;
