@@ -727,7 +727,7 @@ img {
   .portfolio-list__item {
     width: calc((100% - 30px) / 2);
   }
-  .portfolio-list__item:nth-last-child(-n+2) {
+  .portfolio-list__item:nth-last-child(-n+1) {
     margin-bottom: 0;
   }
   .portfolio-list__item:nth-child(odd) {
@@ -745,6 +745,9 @@ img {
   }
   .portfolio-list__item:nth-child(odd) {
     margin-right: 0;
+  }
+  .portfolio-list__item:not(:last-child) {
+    margin-bottom: 0;
   }
   .portfolio-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
